@@ -1,0 +1,13 @@
+// ensure console stays hidden
+NPP_CONSOLE 0
+
+// enable virtual spaces (cursor past end of line) outside column edit mode
+SCI_SENDMSG 2596 3 0
+
+// SCI_SENDMSG == send message to Scintilla edit control
+// 2596 == the message we're sending is SCI_SETVIRTUALSPACEOPTIONS
+// 3 == send the value (SCVS_RECTANGULARSELECTION | SCVS_USERACCESSIBLE)
+// the default value is 1 (just SCVS_RECTANGULARSELECTION) for
+//  virtual spaces in column select mode only
+// you can find these values by poking around the source code a bit, or
+// see http://www.scintilla.org/ScintillaDoc.html
