@@ -1,0 +1,23 @@
+1) Click on the start recording macro button.
+
+2) Select all with ctrl+a.
+
+3) Click on 'search' then click on 'replace'
+
+4) Enter this in the first line:(\r?\n)|(\r\n?)
+
+5) Enter this in the second line:\n (enter in \r\n here if you want to convert to \r\n format)
+
+6) Make sure Regular Expression is checked in the 'Search Mode' and also select 'In Selection'
+
+7) Click Replace all.
+
+8) Stop recording the macro.
+
+9) Playback the macro to see if it performs the operation.
+
+10) Save the macro by giving it a name and optionally a shortcut.
+
+11) Name it Replace EOL as LF
+
+12) Also, make one for Replace EOL as CR+LF.
