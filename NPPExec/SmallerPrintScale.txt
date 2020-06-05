@@ -1,2 +1,4 @@
 NPP_CONSOLE 0
 SCI_SENDMSG 2146 -3
+// Will print about 55 lines with the header enabled.
+// Without this, it prints about 35 lines and its too large, not really suitable for computer code.
