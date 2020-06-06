@@ -1,4 +1,4 @@
-## Highlights line final whitespace
+## Highlights any white space that is only at the end of lines.
 
 try :
 	EWH__dict
@@ -128,6 +128,3 @@ except NameError :
 
 else :
 	editor.setSelectionMode(editor.getSelectionMode()) ## force manual UPDATEUI to happen
-
-## Highlights line final whitespace
-
