@@ -1,4 +1,4 @@
-## Highlights any white space that is only at the end of lines.
+## Highlights any whitespace that is at the end of the lines.
 
 try :
 	EWH__dict
@@ -94,7 +94,7 @@ except NameError :
 			return retval_tup_list
 		both_views_open = True if editor1 and editor2 else False
 		curr_file_active_in_both_views = EWH__fileIsClonedAndIsActiveInBothViews(notepad.getCurrentFilename())
-#		if both_views_open else False
+		#if both_views_open else False
 		if both_views_open :
 			ed1_range_tup_list = get_onscreen_pos_tup_list(editor1)
 			ed2_range_tup_list = get_onscreen_pos_tup_list(editor2)
