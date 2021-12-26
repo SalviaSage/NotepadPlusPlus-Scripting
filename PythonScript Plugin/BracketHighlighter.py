@@ -19,7 +19,7 @@ except NameError:
 		which_editor.indicSetUnder(indicator_number, draw_under_text)       # boolean
 
 	for editorX in (editor1, editor2):
-		indicatorOptionsSet(BH__dict['indic_for_box_at_caret'], INDICATORSTYLE.STRAIGHTBOX, (238,121,159), 0, 255, True, editorX)  # white box rimmed in "pale violet red 2"
+		indicatorOptionsSet(BH__dict['indic_for_box_at_caret'], INDICATORSTYLE.STRAIGHTBOX, (205,133,63), 0, 255, True, editorX)  # white box rimmed in brown color
 		#indicatorOptionsSet(BH__dict['indic_for_box_at_caret'], INDICATORSTYLE.STRAIGHTBOX, (255, 255, 0), 100, 50, True, editorX)
 
 	BH__dict['last_modificationType_for_hack'] = None
