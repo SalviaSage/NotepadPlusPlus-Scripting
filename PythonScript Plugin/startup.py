@@ -53,10 +53,7 @@ editor.callback(StatusbarEOLOverride , [SCINTILLANOTIFICATION.UPDATEUI , SCINTIL
 ## SCRIPT 1 END
 
 ## SCRIPT 2 START ## Makes the caret a block caret in the override mode.
-CARETSTYLE_OVERSTRIKE_BLOCK = 16
-editor1.setCaretStyle(CARETSTYLE_OVERSTRIKE_BLOCK)
-editor2.setCaretStyle(CARETSTYLE_OVERSTRIKE_BLOCK)
-
+editor.setCaretStyle(editor.getCaretStyle() | 16)
 ## SCRIPT 2 END
 
 ## SCRIPT 3 START ## Highlights line final whitespace
@@ -74,7 +71,7 @@ except NameError :
 		which_editor.indicSetOutlineAlpha(indicator_number , outline_alpha) ## integer
 		which_editor.indicSetUnder(indicator_number , draw_under_text) ## boolean
 	for editorX in (editor1 , editor2) :
-		indicatorOptionsSet(EWH__dict['indic_to_use'] , INDICATORSTYLE.ROUNDBOX , (255 , 0 , 0) , 25 , 50 , True , editorX) ## white box rimmed in "pale violet red 2"
+		indicatorOptionsSet(EWH__dict['indic_to_use'] , INDICATORSTYLE.ROUNDBOX , (255 , 0 , 0) , 10 , 25 , True , editorX) ## white box rimmed in "pale violet red 2"
 	def EWH__fileIsCloned(file_name_to_test) :
 		retval = False
 		clone_detect_dict = {}
@@ -419,9 +416,9 @@ except NameError:
 else:
 
 	editor.setSelectionMode(editor.getSelectionMode())  # force manual UPDATEUI to happen
-	## SCRIPT 4 END ## Highlights inside of brackets.
+## SCRIPT 4 END ## Highlights inside of brackets.
 
-	## SCRIPT 5 START ## LINE ENDING REPAIR AT SAVE ## Converts mismatching line endings to the uniform.
+## SCRIPT 5 START ## LINE ENDING REPAIR AT SAVE ## Converts mismatching line endings to the uniform.
 try:
 	LERAS__bad_eol_regex_via_good_eol_dict
 
@@ -437,6 +434,5 @@ except NameError:
 		editor.rereplace(LERAS__bad_eol_regex_via_good_eol_dict[correct_eol_for_this_file], correct_eol_for_this_file)
 	notepad.callback(LERAS__callback_npp_FILEBEFORESAVE , [NOTIFICATION.FILEBEFORESAVE])
 
-	## SCRIPT 5 END
-
+## SCRIPT 5 END
 
