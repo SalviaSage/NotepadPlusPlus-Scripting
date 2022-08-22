@@ -1,6 +1,5 @@
-## Makes it so, when your cursor is inside a bracket, the whole bracket is put in red rectangular frame.
+## Makes it so, when your cursor is inside a bracket, the whole bracket is put in a brown rectangular frame.
 ## Helps working with brackets.
-
 try:
 
 	BH__dict
@@ -227,3 +226,4 @@ except NameError:
 else:
 
 	editor.setSelectionMode(editor.getSelectionMode())  # force manual UPDATEUI to happen
+
