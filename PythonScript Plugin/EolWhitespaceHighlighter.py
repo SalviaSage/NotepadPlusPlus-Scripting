@@ -13,7 +13,7 @@ except NameError :
 		which_editor.indicSetOutlineAlpha(indicator_number , outline_alpha) ## integer
 		which_editor.indicSetUnder(indicator_number , draw_under_text) ## boolean
 	for editorX in (editor1 , editor2) :
-		indicatorOptionsSet(EWH__dict['indic_to_use'] , INDICATORSTYLE.ROUNDBOX , (255 , 0 , 0) , 25 , 50 , True , editorX) ## white box rimmed in "pale violet red 2"
+		indicatorOptionsSet(EWH__dict['indic_to_use'] , INDICATORSTYLE.ROUNDBOX , (255 , 0 , 0) , 10 , 25 , True , editorX) ## white box rimmed in "pale violet red 2"
 	def EWH__fileIsCloned(file_name_to_test) :
 		retval = False
 		clone_detect_dict = {}
